@@ -1,0 +1,30 @@
+{
+  "name": "dumpcityserver",
+  "version": "1.0.0",
+  "description": "Server for GraphQL",
+  "main": "index.js",
+  "dependencies": {
+    "@types/node": "^13.7.0",
+    "reflect-metadata": "^0.1.13",
+    "sqlite3": "^4.1.1",
+    "typeorm": "^0.2.22",
+    "vesper": "^0.1.9"
+  },
+  "devDependencies": {
+    "ts-node": "^8.6.2",
+    "typescript": "^3.7.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/colepalm/DumpCityServer.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/colepalm/DumpCityServer/issues"
+  },
+  "homepage": "https://github.com/colepalm/DumpCityServer#readme"
+}
