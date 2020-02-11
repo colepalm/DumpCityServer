@@ -5,9 +5,8 @@
   "main": "index.js",
   "dependencies": {
     "@types/node": "^13.7.0",
+    "mysql": "^2.18.1",
     "reflect-metadata": "^0.1.13",
-    "sqlite3": "^4.1.1",
-    "typeorm": "^0.2.22",
     "vesper": "^0.1.9"
   },
   "devDependencies": {
