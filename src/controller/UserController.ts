@@ -1,36 +1,35 @@
-import "reflect-metadata";
 import { Controller, Mutation, Query } from 'vesper';
 import { EntityManager } from 'typeorm';
 import { User } from '../entity/User';
 
 @Controller()
 export class UserController {
-  constructor(private entityManager: EntityManager) { }
+  constructor(private manager: EntityManager) { }
 
   @Query()
   users() {
-    return this.entityManager.find(User);
+    return this.manager.find(User);
   }
 
   @Query()
   user({ id }) {
-    return this.entityManager.findOne(User, id);
+    return this.manager.findOne(User, id);
   }
 
   @Mutation()
   signUp(args) {
-    const user = this.entityManager.create(User, args);
-    return this.entityManager.save(User, user);
+    const user = this.manager.create(User, args);
+    return this.manager.save(User, user);
   }
 
   @Mutation()
   signIn(args) {
-    return this.entityManager.find(User, args)
+    return this.manager.find(User, args)
   }
 
-  @Mutation()
-  async deleteUser({ id }) {
-    await this.entityManager.remove(User, { id: id });
-    return true;
-  }
+  // @Mutation()
+  // async deleteUser({ id }) {
+  //   const user = await this.manager.remove(User, { id: id });
+  //   return true;
+  // }
 }
