@@ -1,11 +1,13 @@
 {
-  "type": "mysql",
-  "url": "dump-city-stg.cnqj6ilgnri0.us-west-1.rds.amazonaws.com",
-  "port": 3306,
-  "username": "admin",
-  "password": "74rLXjUWmu7vBso8EfQk",
+  "type": "postgres",
+  "host": "dump-city-postgres.cnqj6ilgnri0.us-west-1.rds.amazonaws.com",
+  "port": 5432,
+  "username": "postgres",
+  "password": "sIDo3tu4TKFCT68Ioz4A",
+  "database": "dumpcity",
   "synchronize": true,
   "logging": false,
+  "ssl": "Amazon RDS",
   "entities": [
     "src/entity/**/*.ts"
   ],
