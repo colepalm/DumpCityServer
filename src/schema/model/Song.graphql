@@ -1,0 +1,8 @@
+type Song {
+    id: Int
+    name: String
+    firstPlayed: String
+    lastPlayed: String
+    currentGap: Int
+    timesPlayed: Int
+}

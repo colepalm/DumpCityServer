@@ -1,14 +1,18 @@
 import { bootstrap } from 'vesper';
 import { UserController } from './controller/UserController';
 import { User } from './entity/User';
+import { SongController } from "./controller/SongController";
+import { Song } from "./entity/Song";
 
 bootstrap({
   port: 3000,
   controllers: [
-    UserController
+      SongController,
+      UserController,
   ],
   entities: [
-    User
+      Song,
+      User,
   ],
   schemas: [
     `${__dirname}/schema/**/*.graphql`
