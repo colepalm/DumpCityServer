@@ -1,6 +1,7 @@
 import { Controller, Mutation, Query } from 'vesper';
 import { EntityManager } from 'typeorm';
 import { User } from '../entity/User';
+import { SignUp } from "../args/UserArgs";
 
 @Controller()
 export class UserController {
