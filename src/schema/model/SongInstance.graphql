@@ -1,0 +1,9 @@
+type SongInstance {
+    id: ID!
+    song: Song!
+    setNumber: Int!
+    position: Int!
+    show: Show!
+    description: String
+    jamChart: Boolean
+}

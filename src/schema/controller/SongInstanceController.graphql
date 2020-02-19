@@ -1,0 +1,10 @@
+type Mutation {
+    createSongInstance(
+        id: String,
+        setNumber: Int
+        position: Int
+        showId: String!,
+        description: String
+        jamChart: Boolean
+    ): SongInstance
+}
