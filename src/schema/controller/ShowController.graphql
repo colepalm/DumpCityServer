@@ -1,0 +1,13 @@
+type Query {
+    shows: [Show]
+}
+
+type Mutation {
+    createShow(
+        date: String!
+        venueName: String!
+        city: String,
+        state: String,
+        country: String,
+    ): Show
+}
