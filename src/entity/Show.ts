@@ -1,5 +1,7 @@
 import { BaseEntity, Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
+import { SongInstance } from "./SongInstance";
+
 @Entity()
 export class Show extends BaseEntity {
 
