@@ -4,6 +4,7 @@ import { Show } from "./Show";
 
 @Entity()
 export class Venue extends BaseEntity {
+
     @PrimaryGeneratedColumn()
     id: number;
 

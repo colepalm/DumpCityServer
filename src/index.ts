@@ -9,23 +9,26 @@ import { VenueController } from "./controller/VenueController";
 import { Show } from "./entity/Show";
 import { Venue } from "./entity/Venue";
 import { SongInstance } from "./entity/SongInstance";
+import { ShowController } from "./controller/ShowController";
+import { Message } from "./entity/Message";
 
 bootstrap({
   port: 3000,
   controllers: [
       MessageController,
+      ShowController,
       SongController,
       SongInstanceController,
       UserController,
       VenueController
   ],
   entities: [
+      Message,
       Show,
       Song,
       SongInstance,
       User,
       Venue
-
   ],
   schemas: [
     `${__dirname}/schema/**/*.graphql`

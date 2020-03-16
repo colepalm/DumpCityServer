@@ -2,11 +2,13 @@ import {
     BaseEntity,
     Column,
     Entity,
+    ManyToOne,
     OneToMany,
     PrimaryGeneratedColumn
 } from 'typeorm';
 
 import { SongInstance } from "./SongInstance";
+import { Venue } from "./Venue";
 
 @Entity()
 export class Show extends BaseEntity {
@@ -17,8 +19,8 @@ export class Show extends BaseEntity {
     @Column()
     date: string;
 
-    @Column()
-    venueId: number;
+    @ManyToOne(() => Venue, venue => venue.id)
+    venue: Venue;
 
     @Column()
     rating: number;

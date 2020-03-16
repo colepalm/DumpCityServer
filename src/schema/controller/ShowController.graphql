@@ -2,12 +2,11 @@ type Query {
     shows: [Show]
 }
 
+# TODO: Add setlist to mutation
 type Mutation {
     createShow(
         date: String!
-        venueName: String!
-        city: String,
-        state: String,
-        country: String,
+        venue: String!
+        rating: String,
     ): Show
 }
