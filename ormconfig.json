@@ -1,9 +1,9 @@
 {
   "type": "postgres",
-  "host": "dump-city-postgres.cnqj6ilgnri0.us-west-1.rds.amazonaws.com",
+  "host": "dumpcity.cgkj0tzkzdo8.us-west-1.rds.amazonaws.com",
   "port": 5432,
   "username": "postgres",
-  "password": "sIDo3tu4TKFCT68Ioz4A",
+  "password": "TakeADump!",
   "database": "dumpcity",
   "synchronize": true,
   "logging": false,

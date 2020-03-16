@@ -1,4 +1,10 @@
-import { BaseEntity, Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import {
+    BaseEntity,
+    Column,
+    Entity,
+    OneToMany,
+    PrimaryGeneratedColumn
+} from 'typeorm';
 
 import { SongInstance } from "./SongInstance";
 
@@ -17,6 +23,6 @@ export class Show extends BaseEntity {
     @Column()
     rating: number;
 
-    @Column()
+    @OneToMany(() => SongInstance, songInstance => songInstance.id)
     setlist: SongInstance[];
 }

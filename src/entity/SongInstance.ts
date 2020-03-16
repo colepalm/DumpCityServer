@@ -1,4 +1,4 @@
-import { BaseEntity, Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import { BaseEntity, Column, Entity, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
 
 import { Show } from "./Show";
 import { Song } from "./Song";
@@ -9,7 +9,7 @@ export class SongInstance extends BaseEntity {
     @PrimaryGeneratedColumn()
     id: number;
 
-    @Column()
+    @ManyToOne(() => Song, song => song.id)
     song: Song;
 
     @Column()
@@ -18,7 +18,7 @@ export class SongInstance extends BaseEntity {
     @Column()
     position: number;
 
-    @Column()
+    @ManyToOne(() => Show, show => show.id)
     show: Show;
 
     @Column()
