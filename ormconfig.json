@@ -5,7 +5,7 @@
   "username": "postgres",
   "password": "TakeADump!",
   "database": "dumpcity",
-  "synchronize": true,
+  "synchronize": false,
   "logging": false,
   "ssl": "Amazon RDS",
   "entities": [
@@ -16,5 +16,8 @@
   ],
   "subscribers": [
     "src/subscriber/**/*.ts"
-  ]
+  ],
+  "cli": {
+    "migrationsDir": "src/migration"
+  }
 }

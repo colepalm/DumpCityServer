@@ -1,7 +1,7 @@
 type Show {
-    id: ID!
+    id: String!
     date: String!
-    venueId: Int!
+    venue: Venue!
     rating: Int
-    setlist: [SongInstance]!
+    setlist: [SongInstance]
 }

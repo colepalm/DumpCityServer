@@ -7,6 +7,6 @@ type Mutation {
     createShow(
         date: String!
         venue: String!
-        rating: String,
+        rating: String
     ): Show
 }
