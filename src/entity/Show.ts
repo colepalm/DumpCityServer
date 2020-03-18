@@ -22,7 +22,9 @@ export class Show extends BaseEntity {
     @ManyToOne(() => Venue, venue => venue.id)
     venue: Venue;
 
-    @Column()
+    @Column({
+        nullable: true
+    })
     rating: number;
 
     @OneToMany(() => SongInstance, songInstance => songInstance.id)

@@ -1,8 +1,9 @@
 import { EntityManager } from 'typeorm';
-import { Mutation, Query } from "vesper";
+import { Controller, Mutation, Query } from "vesper";
 
 import { Show } from "../entity/Show";
 
+@Controller()
 export class ShowController {
     constructor(private manager: EntityManager) { }
 
